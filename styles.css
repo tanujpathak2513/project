@@ -1,0 +1,128 @@
+    /* Reset CSS */
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f0;
+        padding-top: 60px;
+    }
+    
+    header {
+        background-color: #3c306c;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    header h1 {
+        font-size: 2em;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+    
+    #searchInput {
+        width: 60%;
+        padding: 12px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 25px;
+        outline: none;
+        font-size: 1.1em;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    #movieContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        margin-top: 100px;
+        /* Add space for the fixed header */
+    }
+    
+    .movie {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .movie:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .movie img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .movie:hover img {
+        transform: scale(1.05);
+    }
+    
+    .movie h2 {
+        margin-top: 15px;
+        font-size: 1.4em;
+        text-align: center;
+        color: #242347;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    
+    .download-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: 20px;
+        border-radius: 10px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    .download-button:hover {
+        background-color: #45a049;
+        /* Darker green */
+    }
+    
+    #searchButton {
+        position: relative;
+        z-index: 0;
+        width: 100px;
+        height: 56px;
+        border-radius: 80px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        letter-spacing: 2px;
+        transition: all .3s ease;
+        background: linear-gradient(180deg, rgb(182, 231, 182), rgb(241, 135, 135), rgb(142, 142, 164));
+    }
+    
+    #searchButton:hover {
+        color: white;
+        border-radius: 20px;
+    }
